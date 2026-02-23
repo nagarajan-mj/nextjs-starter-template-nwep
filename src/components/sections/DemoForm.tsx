@@ -126,7 +126,7 @@ export function DemoForm() {
                       <CheckCircle2 className="w-7 h-7 text-primary" />
                     </div>
                     <h3 className="font-display font-bold text-xl text-neutral-800 mb-2">
-                      We'll be in touch soon!
+                      We&apos;ll be in touch soon!
                     </h3>
                     <p className="text-neutral-500 text-sm">
                       Your request has been received. Our team will reach out

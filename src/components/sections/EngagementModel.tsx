@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, useScroll, useTransform, useInView } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { Search, ScanSearch, Palette, Wrench, Rocket } from "lucide-react";
 
@@ -75,7 +75,7 @@ export function EngagementModel() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="text-neutral-500 mt-4"
           >
-            We don't just deliver software — we partner with your institution
+            We don&apos;t just deliver software — we partner with your institution
             every step of the way.
           </motion.p>
         </div>

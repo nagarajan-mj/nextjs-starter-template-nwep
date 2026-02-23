@@ -20,7 +20,7 @@ export function CTA() {
             transition={{ duration: 0.5 }}
             className="text-indigo-300 font-semibold text-sm uppercase tracking-widest mb-4"
           >
-            Let's work together
+            Let&apos;s work together
           </motion.p>
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
@@ -48,7 +48,7 @@ export function CTA() {
             className="text-neutral-400 mb-10 max-w-xl mx-auto leading-relaxed"
           >
             Join institutions that have transformed their operations with
-            EduFlow. Let's build your seamless digital ecosystem together.
+            EduFlow. Let&apos;s build your seamless digital ecosystem together.
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 20 }}

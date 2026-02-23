@@ -81,7 +81,7 @@ export function FAQ() {
               transition={{ duration: 0.5, delay: 0.1 }}
               className="text-neutral-500 mt-4 leading-relaxed"
             >
-              Can't find what you're looking for?{" "}
+              Can&apos;t find what you&apos;re looking for?{" "}
               <a
                 href="#demo"
                 className="text-primary font-semibold hover:underline"
