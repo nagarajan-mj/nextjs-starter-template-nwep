@@ -7,9 +7,8 @@ import { ArrowRight } from "lucide-react";
 export function CTA() {
   return (
     <section className="py-24 relative overflow-hidden bg-neutral-900 text-white">
-      {/* Subtle indigo glow */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(79,70,229,0.3),transparent)]" />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_40%_40%_at_80%_80%,rgba(79,70,229,0.15),transparent)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(15,76,129,0.35),transparent)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_40%_40%_at_80%_80%,rgba(199,125,42,0.2),transparent)]" />
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="mx-auto max-w-3xl text-center">
@@ -18,7 +17,7 @@ export function CTA() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="text-indigo-300 font-semibold text-sm uppercase tracking-widest mb-4"
+            className="text-primary-light font-semibold text-sm uppercase tracking-widest mb-4"
           >
             Let&apos;s work together
           </motion.p>
@@ -35,7 +34,7 @@ export function CTA() {
               className="text-shimmer"
               style={{ WebkitTextFillColor: "initial" }}
             >
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-300 to-violet-300">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-light to-accent">
                 flow?
               </span>
             </span>

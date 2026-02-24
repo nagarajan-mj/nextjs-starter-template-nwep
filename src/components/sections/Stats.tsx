@@ -80,10 +80,13 @@ export function Stats() {
   const inView = useInView(ref, { once: true, margin: "-80px" });
 
   return (
-    <section ref={ref} className="relative py-20 bg-primary overflow-hidden">
+    <section
+      ref={ref}
+      className="relative py-20 bg-neutral-900 overflow-hidden"
+    >
       {/* Subtle inner glow */}
       <div className="absolute top-0 left-1/4 w-1/2 h-px bg-white/20" />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_80%_at_50%_0%,rgba(255,255,255,0.05),transparent)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_80%_at_50%_0%,rgba(255,255,255,0.07),transparent)]" />
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">

@@ -17,11 +17,11 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
+        <Stats />
         <SocialProof />
         <ProblemSolution />
-        <Stats />
-        <WhyZitraar />
         <Services />
+        <WhyZitraar />
         <EngagementModel />
         <FAQ />
         <DemoForm />

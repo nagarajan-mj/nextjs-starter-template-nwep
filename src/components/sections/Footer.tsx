@@ -13,10 +13,10 @@ export function Footer() {
           {/* Brand */}
           <div className="md:col-span-1">
             <Link href="/" className="flex items-center gap-2 mb-5 group">
-              <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center text-white font-display font-bold text-base group-hover:bg-primary-hover transition-colors">
+              <div className="w-9 h-9 rounded-lg bg-white/10 border border-white/20 flex items-center justify-center text-white font-display font-semibold text-base group-hover:bg-primary transition-colors">
                 E
               </div>
-              <span className="font-display font-bold text-xl text-white tracking-tight">
+              <span className="font-display font-semibold text-2xl text-white tracking-tight">
                 EduFlow
               </span>
             </Link>
@@ -39,7 +39,9 @@ export function Footer() {
 
           {/* Solution */}
           <div>
-            <h4 className="font-semibold text-white mb-5 text-sm">Solution</h4>
+            <h4 className="font-semibold text-white mb-5 text-sm uppercase tracking-[0.15em]">
+              Solution
+            </h4>
             <ul className="space-y-3 text-sm">
               {[
                 "Digital Campus",
@@ -58,7 +60,9 @@ export function Footer() {
 
           {/* Company */}
           <div>
-            <h4 className="font-semibold text-white mb-5 text-sm">Company</h4>
+            <h4 className="font-semibold text-white mb-5 text-sm uppercase tracking-[0.15em]">
+              Company
+            </h4>
             <ul className="space-y-3 text-sm">
               {["About Us", "Careers", "Blog", "Contact"].map((item) => (
                 <li key={item}>
@@ -72,7 +76,9 @@ export function Footer() {
 
           {/* Resources */}
           <div>
-            <h4 className="font-semibold text-white mb-5 text-sm">Resources</h4>
+            <h4 className="font-semibold text-white mb-5 text-sm uppercase tracking-[0.15em]">
+              Resources
+            </h4>
             <ul className="space-y-3 text-sm">
               {[
                 "Documentation",
@@ -90,7 +96,7 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="pt-8 border-t border-neutral-800 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-neutral-600">
+        <div className="pt-8 border-t border-neutral-800 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-neutral-500">
           <p>© {currentYear} Zitraar Technologies. All rights reserved.</p>
           <div className="flex gap-6">
             {["Privacy", "Terms", "Cookies"].map((item) => (

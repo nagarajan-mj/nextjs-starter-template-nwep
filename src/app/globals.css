@@ -3,25 +3,24 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-dm-sans);
-  --font-display: var(--font-syne);
+  --font-sans: var(--font-jakarta);
+  --font-display: var(--font-fraunces);
 
-  /* Organic Teal + Coral design system */
-  --color-primary: #0d9488; /* Teal 600 */
-  --color-primary-hover: #0f766e; /* Teal 700 */
-  --color-primary-light: #ccfbf1; /* Teal 100 */
-  --color-primary-mid: #5eead4; /* Teal 300 */
-  --color-secondary: #ff7f50; /* Coral */
-  --color-accent: #fff1f2; /* Rose 50 */
+  --color-primary: #0f4c81;
+  --color-primary-hover: #0b3b63;
+  --color-primary-light: #dceeff;
+  --color-primary-mid: #7fb6ec;
+  --color-secondary: #c77d2a;
+  --color-accent: #fff8e6;
 
-  --color-neutral-50: #fafaf9; /* Stone 50 */
-  --color-neutral-100: #f5f5f4; /* Stone 100 */
-  --color-neutral-200: #e7e5e4; /* Stone 200 */
-  --color-neutral-300: #d6d3d1; /* Stone 300 */
-  --color-neutral-500: #78716c; /* Stone 500 */
-  --color-neutral-700: #44403c; /* Stone 700 */
-  --color-neutral-800: #292524; /* Stone 800 */
-  --color-neutral-900: #1c1917; /* Stone 900 */
+  --color-neutral-50: #f7f8fb;
+  --color-neutral-100: #eef1f6;
+  --color-neutral-200: #dce2eb;
+  --color-neutral-300: #c5cddd;
+  --color-neutral-500: #6b7385;
+  --color-neutral-700: #384255;
+  --color-neutral-800: #212a3d;
+  --color-neutral-900: #131a2a;
   --color-surface: #ffffff;
 
   /* Semantic */
@@ -31,20 +30,32 @@
 }
 
 :root {
-  --background: #fdfbf7;
-  --foreground: #1c1917;
-  --muted: #f0fdf4;
-  --muted-foreground: #57534e;
-  --border: #e7e5e4;
-  --font-dm-sans: "DM Sans", sans-serif;
-  --font-syne: "Syne", sans-serif;
+  --background: #f8f9fc;
+  --foreground: #131a2a;
+  --muted: #eef2f8;
+  --muted-foreground: #55607a;
+  --border: #dce2eb;
+  --font-jakarta: "Plus Jakarta Sans", sans-serif;
+  --font-fraunces: "Fraunces", serif;
 }
 
 body {
-  background: var(--background);
+  background:
+    radial-gradient(circle at 8% 6%, rgba(15, 76, 129, 0.1), transparent 28%),
+    radial-gradient(
+      circle at 90% 12%,
+      rgba(199, 125, 42, 0.12),
+      transparent 32%
+    ),
+    var(--background);
   color: var(--foreground);
   font-family: var(--font-sans);
   @apply antialiased;
+}
+
+::selection {
+  background: color-mix(in oklab, var(--color-primary) 22%, transparent);
+  color: var(--foreground);
 }
 
 /* ── Marquee animation ── */
@@ -75,6 +86,30 @@ body {
   animation-play-state: paused;
 }
 
+@keyframes blob {
+  0% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  33% {
+    transform: translate(14px, -18px) scale(1.03);
+  }
+  66% {
+    transform: translate(-10px, 12px) scale(0.97);
+  }
+  100% {
+    transform: translate(0px, 0px) scale(1);
+  }
+}
+
+@keyframes draw {
+  from {
+    stroke-dasharray: 0 300;
+  }
+  to {
+    stroke-dasharray: 300 0;
+  }
+}
+
 /* ── Shimmer animation ── */
 @keyframes shimmer {
   0% {
@@ -87,10 +122,10 @@ body {
 .text-shimmer {
   background: linear-gradient(
     90deg,
-    #4f46e5 0%,
-    #818cf8 40%,
-    #4f46e5 60%,
-    #4f46e5 100%
+    #0f4c81 0%,
+    #4f8bc7 40%,
+    #c77d2a 60%,
+    #0f4c81 100%
   );
   background-size: 200% auto;
   background-clip: text;
@@ -101,20 +136,20 @@ body {
 
 /* ── Subtle dot grid pattern ── */
 .bg-dot-grid {
-  background-image: radial-gradient(circle, #c7d2fe 1px, transparent 1px);
+  background-image: radial-gradient(circle, #c4d8ef 1px, transparent 1px);
   background-size: 28px 28px;
 }
 
 /* ── Card base ── */
 .card-clean {
-  @apply bg-white rounded-2xl border border-neutral-200 shadow-sm hover:shadow-md hover:border-primary/30 transition-all duration-300;
+  @apply bg-white rounded-2xl border border-neutral-200 shadow-sm hover:shadow-lg hover:border-primary/30 transition-all duration-300;
 }
 
 /* ── Hero gradient mesh ── */
 .hero-glow {
   background: radial-gradient(
     ellipse 80% 50% at 50% -10%,
-    rgba(79, 70, 229, 0.12) 0%,
+    rgba(15, 76, 129, 0.14) 0%,
     transparent 70%
   );
 }
@@ -122,4 +157,8 @@ body {
 /* ── Section label ── */
 .section-label {
   @apply inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary-light px-4 py-1.5 text-sm font-semibold text-primary;
+}
+
+.panel-shell {
+  @apply rounded-[2rem] border border-neutral-200/80 bg-white/85 backdrop-blur-sm;
 }
